@@ -10,7 +10,7 @@ try:
 	passwd=driver.find_element_by_xpath('//*[@id="password"]')
 	#whatpass=input("enter password:- ")
 	#time.sleep(5)
-	passwd.send_keys('onepiece')
+	passwd.send_keys()
 	login=driver.find_element_by_xpath('//*[@id="loginBtn"]')
 	login.click()
 
