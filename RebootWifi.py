@@ -2,6 +2,8 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
 
+password=input("Enter your login password:- ")
+time.sleep(1)
 try:
 	driver = webdriver.Chrome()
 	driver.get("http://192.168.0.1/login.htm")
@@ -10,7 +12,7 @@ try:
 	passwd=driver.find_element_by_xpath('//*[@id="password"]')
 	#whatpass=input("enter password:- ")
 	#time.sleep(5)
-	passwd.send_keys()
+	passwd.send_keys(password)
 	login=driver.find_element_by_xpath('//*[@id="loginBtn"]')
 	login.click()
 
